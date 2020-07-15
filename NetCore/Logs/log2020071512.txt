@@ -1,0 +1,23 @@
+2020-07-15 06:46:27.810 Application starting up
+2020-07-15 06:46:30.615 HTTP "GET" "/" responded 404 in 0.6384 ms
+2020-07-15 06:58:31.920 Application starting up
+2020-07-15 06:58:36.455 HTTP "GET" "/" responded 404 in 0.6897 ms
+2020-07-15 06:58:54.503 Application starting up
+2020-07-15 06:58:56.845 HTTP "GET" "/" responded 404 in 0.7043 ms
+2020-07-15 06:59:58.739 HTTP "POST" "/api/user/register" responded 500 in 1893.7470 ms
+Service.Exception.RestException: Exception of type 'Service.Exception.RestException' was thrown.
+   at Service.Auth.AuthService.RegisterAsync(RegisterVm model) in N:\Project\NetCore\Service\Auth\AuthService.cs:line 55
+   at Web.Controllers.UserController.Register(RegisterVm model) in N:\Project\NetCore\NetCore\Controllers\UserController.cs:line 37
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
